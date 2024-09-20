@@ -1,0 +1,144 @@
+/* Root styles */
+:root {
+  line-height: 1.5;
+  font-weight: 600;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body and Global Styles */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: linear-gradient(270deg, rgb(30, 229, 251), #f4ed69); /* พื้นหลังแบบ gradient */
+  background-size: 200% 200%; /* ขยายพื้นหลัง */
+  animation: backgroundAnimation 15s ease infinite; /* ตั้งเวลาให้เคลื่อนไหว */
+}
+
+/* Animation for background */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%; /* เริ่มต้นที่ตำแหน่งซ้าย */
+  }
+  100% {
+    background-position: 100% 50%; /* จบที่ตำแหน่งขวา */
+  }
+}
+
+/* Button Styles */
+button {
+  border-radius: 7px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #c1bfbf;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #292928;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Main Image Container */
+.main-image-container {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.level-display {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+/* Responsive Image Styles */
+.main-image-container img {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image Row */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Image Button Container */
+.image-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 9px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Small Image Styles */
+.small-image {
+  width: 65px;
+  height: auto;
+  margin-bottom: 6px;
+  transition: transform 0.7s ease;
+}
+
+.small-image.animate {
+  transform: scale(1.3);
+}
+
+/* Reset Button Styles */
+.reset-button {
+  display: block; /* เปลี่ยนเป็น block เพื่อให้ใช้ margin ได้ */
+  margin: 20px auto; /* เพิ่มระยะขอบด้านบน และทำให้ชิดกลาง */
+  padding: 8px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #b62626;
+}
+.game-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px; /* เพิ่มระยะขอบด้านบน */
+  margin-bottom: 10px; /* Space between title and level display */
+  text-align: center; /* Center the title */
+}
+
+/* Media Queries */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #ffffff;
+    background-color: #ffffff;
+  }
+
+
+  button {
+    background-color: #eeeced;
+  }
+}
